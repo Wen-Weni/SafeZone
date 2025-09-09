@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Йога</title>
+    <style>
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            font-size: 25px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: normal;
+        }
+            h3 {
+        font-weight: normal;
+        font-size: 25px;
+        }
+
+        .text ul {
+        list-style-type: disc;
+        font-size: 20px;
+        padding-left: 20px;
+        }
+        p {
+            font-size: 20px;
+        }
+        .important {
+            background-color: #E4E6D9;
+            border-left: 5px solid #8c8c00;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        flex-wrap: wrap;
+        gap: 20px;
+        }
+
+        .text {
+            flex: 1 1 55%;
+            max-width: 55%;
+        }
+
+        .image {
+            flex: 1 1 40%;
+            max-width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image img {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+        }
+
+
+        .advice{
+            background-color: #E4E6D9;
+            max-width: 80%;
+            padding: 20px;
+            margin: 60px;
+        }
+
+        .exercises{
+            background-color: #FEF7EE;
+            max-width: 40%;
+            border-radius: 42px;
+            padding: 20px;
+            margin: 40px auto;
+        }
+        .exercises2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   /* Горизонтальне центровання */
+     }
+     .exercises2 li {
+        font-size: 25px;
+        margin-bottom: 5px;
+     }
+
+     .yoga-image {
+        padding: 60px 0 60px 15%;
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/SafeZone.svg" alt="Логотип">
+        </div>
+
+        <ul class="nav_links">
+            <li><a href="index.html">Home</a></li> 
+            <li><a href="tests.html">Тести</a></li>
+            <li><a href="art_therapy.html">Арт-терапія</a></li>
+            <li><a href="yoga.html" class="active">Йога</a></li>
+            <li><a href="Volunteering.html">Волонтерство</a></li>
+            <li>
+                <a href="https://forms.gle/LizJPz7tdqPyKQF1A" target="_blank">
+                    <i class="fas fa-envelope"></i> Скринька довіри
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div class="ficus-container" id="ficus-container">
+        <div class="ficus-controls">
+          <button id="ask-btn">Задати питання</button>
+          <button id="dismiss-btn">Приховати фікуса</button>
+        </div>
+        <div class="popup-container" id="popup">
+          <div class="speech-bubble" id="speech"></div>
+          <img src="images/state0.png" alt="Character" id="character" class="character">
+        </div>
+      </div>
+      <button id="return-btn" style="display:none;">Повернути фікуса</button>
+      <div id="question-box" class="question-box" style="display:none;"></div>
+
+
+    <div class="main-content">
+        <h2>Йога 🧘‍♀️</h2>
+        <section class="main">
+            <div class="text">
+                
+                <h3>Чому йога важлива у воєнний та післявоєнний час?</h3>
+                <p>У періоди сильного стресу, тривоги та нестабільності наше тіло та психіка перебувають у стані постійного напруження. Йога — це не просто фізичні вправи, а цілісна система, що допомагає:</p>
+                <ul>
+                    <li>Знизити рівень тривожності.</li>
+                    <li>Покращити якість сну.</li>
+                    <li>Відновити відчуття контролю над собою.</li>
+                    <li>Підвищити стійкість до стресу.</li>
+                    <li>Зміцнити зв'язок між тілом і свідомістю.</li>
+                </ul>
+    
+                <h3>З чого почати?</h3>
+                <p>Навіть 10-15 хвилин на день можуть змінити ваш стан:</p>
+                <ul>
+                    <li>Почніть з простих дихальних вправ (наприклад, глибоке дихання животом).</li>
+                    <li>Додавайте легкі асани (пози), що не потребують спеціального спорядження.</li>
+                    <li>Слухайте медитації на YouTube або використовуйте додатки типу Insight Timer або Balance.</li>
+                    <li>Спробуйте йогу в групах онлайн або офлайн — це також сприяє соціальній підтримці.</li>
+                </ul>
+    
+                <div class="important">
+                    <p><strong>Важливо:</strong><br>
+                    Йога — це не спорт і не змагання. Кожен крок — це шлях до себе, до внутрішнього балансу. Під час війни та після неї — це те, що може стати вашою особистою "точкою опори".</p>
+                </div>
+            </div>
+    
+            <div class="image">
+                <img src="images/yoga/charact.png" alt="Йога персонаж">
+            </div>
+        </section>
+    </div>
+    
+        <div class="line"></div>
+        <img src="images/yoga/Що я зміг знайти саме для тебе.png" class="yoga-image">
+
+
+
+
+    <div class="line"></div>
+
+
+    <div class="exercises">
+          <h2><b>Найпростіша вправа з дихання</b></h2>
+          <h2><b>Глибоке діафрагментальне дихання</b></h2>
+      
+        <div class="exercises2">
+            <img src="images/yoga/charact.png">
+            <br>
+      
+            <ul>
+                <li>1. Займіть зручне положення</li>
+                <li>2. Закрийте очі (за бажанням)</li>
+                <li>3. Вдих через ніс (на рахунок 4)</li>
+                <li>4. Затримка дихання (на рахунок 2)</li>
+                <li>5. Видих через рот або ніс (на рахунок 6)</li>
+                <li>6. Повторіть 5–10 циклів</li>
+            </ul>
+            
+            <div class="advice">
+                <p>Порада: Якщо виникає тривожність або думки "розбігаються", зосередьтесь лише на рахунку: Вдих-1-2-3-4, Затримка-1-2, Видих-1-2-3-4.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer_main">
+        <div class="footer_column">
+            <h3>Каталог</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li> 
+                <li><a href="tests.html">Тести</a></li>
+                <li><a href="art_therapy.html">Арт-терапія</a></li>
+                <li><a href="yoga.html">Йога</a></li>
+                <li><a href="Volunteering.html">Волонтерство</a></li>
+                <li><a href="https://forms.gle/LizJPz7tdqPyKQF1A">Скринька довіри</a></li>
+            </ul>    
+        </div>
+        
+        <div class="footer_column">
+            <h3>Телефони</h3>
+            <p>Телефон: +38 (0563) 20-49-58</p>
+            <p>Секретар: +38 (066) 677-39-55</p>
+        </div>
+
+        <div class="footer_column">
+            <h3>Адреса:</h3>
+            <p>🏢 вул. Світличної Ганни, 63, м. Павлоград, Україна, 51400</p>
+            <p>📩 pkntudp@ukr.net</p>
+        </div>
+    </footer>
+
+    <script src="character.js"></script>
+    <script src="redirect.js"></script>
+</div>
+</html>
