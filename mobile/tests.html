@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mobile-styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Тести</title>
+    </head>
+    <style>
+    
+    .test-grid {
+        padding: 1rem;
+        text-align: center;
+        background-image: url('images/фон.png');
+        background-attachment: fixed;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem; /* Збільшений відступ між плитками */
+        justify-items: center;
+        width: 100%;
+        max-width: 900px;
+        margin: auto;
+        padding: 1rem; /* Повертаємо зовнішній відступ всередині контейнера */
+    }
+    
+    .test-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 300px;
+        width: 100%;
+        padding: 15px; /* Відступ всередині плитки */
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+    }
+    
+    
+    .test-item img {
+        width: 90%;
+        height: 250px;
+        object-fit: contain;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+    }
+    
+    
+    .test-item img:hover {
+        transform: scale(1.05);
+    }
+    
+    .test-item p {
+        margin-top: 0.7rem;
+        font-size: 20px;
+        color: #333;
+        text-align: center;
+    }
+    
+    
+    </style>
+    <body>
+        <header>
+            <div class="logo">
+              <img src="icon/SafeZone.svg" alt="Логотип">
+          </div>
+            <button class="menu-toggle" onclick="toggleMenu()">
+              <img src="icon/меню.svg" alt="Меню">
+            </button>
+          </header>
+          
+          <!-- Модальне меню -->
+          <div id="menuOverlay" class="menu-overlay" onclick="closeMenu(event)">
+            <div class="menu-frame" onclick="event.stopPropagation()">
+              <div class="logo">
+                <img src="icon/SafeZone.svg" alt="Логотип">
+            </div>
+              <ul class="menu-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tests.html">Тести</a></li>
+                <li><a href="art_therapy.html">Арт-терапія</a></li>
+                <li><a href="yoga.html">Йога; дихальні вправи</a></li>
+                <li><a href="Volunteering.html">Волонтерські заходи коледжу</a></li>
+                <li><a href="https://forms.gle/LizJPz7tdqPyKQF1A" target="_blank">Скринька довіри</a></li>
+              </ul>
+            </div>
+          </div>
+
+
+    
+        <div class="ficus-container" id="ficus-container">
+            <div class="ficus-controls">
+              <button id="ask-btn">Задати питання</button>
+              <button id="dismiss-btn">Приховати фікуса</button>
+            </div>
+            <div class="popup-container" id="popup">
+              <div class="speech-bubble" id="speech"></div>
+              <img src="../images/state0.png" alt="Character" id="character" class="character">
+            </div>
+          </div>
+          <button id="return-btn" style="display:none;">Повернути фікуса</button>
+          <div id="question-box" class="question-box" style="display:none;"></div>
+          
+    
+        <section class="test-grid">
+            <h1>Тести 📝</h1>
+            <div class="grid-container">
+                <div class="test-item">
+                    <a href="https://forms.gle/HLBRhkoc74xasY936" target="_blank">
+                        <img src="../images/tests/Мій емоційний стан сьогодні.png">
+                    </a>
+                    <p>Мій емоційний стан сьогодні</p>
+                </div>
+        
+                <div class="test-item">
+                    <a href="https://forms.gle/WgB1gs4GDmgzq7hm8" target="_blank">
+                        <img src="../images/tests/З ким я можу поговорити.png">
+                    </a>
+                    <p>З ким я можу поговорити?</p>
+                </div>
+        
+                <div class="test-item">
+                    <a href="https://forms.gle/evW8DKSAfoVpYWhW9" target="_blank">
+                        <img src="../images/tests/Моя стресостійкість.png">
+                    </a>
+                    <p>Моя стресостійкість</p>
+                </div>
+        
+                <div class="test-item">
+                    <a href="https://forms.gle/p5nxUA3U9nJqfKzR9" target="_blank">
+                        <img src="../images/tests/Що мене радує.png">
+                    </a>
+                    <p>Що мене радує?</p>
+                </div>
+        
+                <div class="test-item">
+                    <a href="https://forms.gle/itR539Pa5J3DpRLq5" target="_blank">
+                        <img src="../images/tests/Мої способи розслаблення.png">
+                    </a>
+                    <p>Мої способи розслаблення</p>
+                </div>
+        
+                <div class="test-item">
+                    <a href="https://forms.gle/GJodv14v8FrKWUM28" target="_blank">
+                        <img src="../images/tests/Моє бачення майбутнього.png">
+                    </a>
+                    <p>Моє бачення майбутнього</p>
+                </div>
+        
+                <div class="test-item">
+                    <a href="https://forms.gle/7DiVTL1X97rWSALF7" target="_blank">
+                        <img src="../images/tests/Моя реакція на новини.png">
+                    </a>
+                    <p>Моя реакція на новини</p>
+                </div>
+        
+                <div class="test-item">
+                    <a href="https://forms.gle/yJ9JAVvAoG4CKquh9" target="_blank">
+                        <img src="../images/tests/Моя емоційна грамотність.png">
+                    </a>
+                    <p>Моя емоційна грамотність</p>
+                </div>
+        
+                <div class="test-item">
+                    <a href="https://forms.gle/82QW9Gd2aDrVGj589" target="_blank">
+                        <img src="../images/tests/Мої внутрішні ресурси.png">
+                    </a>
+                    <p>Мої внутрішні ресурси</p>
+                </div>
+        
+                <div class="test-item">
+                    <a href="https://forms.gle/SBFdRpkyauz2HvTz6" target="_blank">
+                        <img src="../images/tests/Мій рівень саморегуляції.png">
+                    </a>
+                    <p>Мій рівень саморегуляції</p>
+                </div>
+        
+                <div class="test-item">
+                    <a href="https://forms.gle/U2T5aaYVjM1PErjX9" target="_blank">
+                        <img src="../images/tests/Моя підтримка з боку дорослих.png">
+                    </a>
+                    <p>Моя підтримка з боку дорослих</p>
+                </div>
+        
+                <div class="test-item">
+                    <a href="https://forms.gle/aZXu5bZCijYDsnuQ8" target="_blank">
+                        <img src="../images/tests/Мій шлях до емоційного відновлення.png">
+                    </a>
+                    <p>Мій шлях до емоційного відновлення</p>
+                </div>
+            </div>
+        </section>
+        
+        
+        <footer class="footer">
+            <div class="menu-column">
+    
+    
+              <div class="menu-item">            
+                <div class="contact-row">
+                    <div class="contact-icon secretary-icon"></div>
+                    <div class="contact-text"><a href="tests.html">Тести</a></div>
+                  </div></div>
+              <div class="menu-item"><a href="art_therapy.html">Арт-терапія</a></div>
+              <div class="menu-item"><a href="yoga.html">Йога; дихальні вправи</a></div>
+              <div class="menu-item"><a href="Volunteering.html">Волонтерство</a></div>
+              <div class="menu-item"><a href="https://forms.gle/LizJPz7tdqPyKQF1A">Скринька довіри</a></div>
+            </div>
+            
+            <div class="contacts-column">
+              <div class="contact-row">
+                <div class="contact-icon phone-icon"></div>
+                <div class="contact-text">+38 (0563) 20-49-58</div>
+              </div>
+              <div class="contact-row">
+                <div class="contact-text">Секретар: +38 (066) 677-39-55</div>
+              </div>
+              <div class="contact-row">
+                <div class="contact-icon email-icon"></div>
+                <div class="contact-text">pkntudp@ukr.net</a></div>
+              </div>
+              <div class="contact-row">
+                <div class="contact-icon address-icon"></div>
+                <div class="contact-text address">
+                  вул. Світличної Ганни, 63,<br>
+                  м. Павлоград, Україна, 51400
+                </div>
+              </div>
+            </div>
+          </footer>
+    
+    
+    <script src="character.js"></script>
+    <script src="script.js"></script>
+    <script src="../redirect.js"></script>
+    </body>
+    </html>

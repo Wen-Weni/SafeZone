@@ -1,0 +1,416 @@
+body{
+    background-color: #E4E6D9;
+    font-style: robot;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: #e6e5d7;
+padding: 1rem;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.menu-toggle img {
+  width: auto;
+  height: 80px;
+  display: block;
+}
+
+.menu-frame .logo img {
+  width: 200px !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+
+
+/* Оверлей */
+.menu-overlay {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: #6c8776b7; /* темно-зелений напівпрозорий */
+z-index: 1000;
+justify-content: center;
+align-items: center;
+}
+
+/* Модальне меню */
+.menu-frame {
+background-color: #e6e5d7;
+padding: 2rem;
+border-radius: 8px;
+text-align: center;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+width: 90%;
+max-width: 400px;
+}
+
+.menu-title {
+font-family: "Brush Script MT", cursive;
+font-size: 2rem;
+color: #6C8776CC;
+margin-bottom: 1rem;
+}
+
+.menu-list {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.menu-list li {
+margin: 1rem 0;
+font-size: 1.2rem;
+}
+
+.menu-list li a {
+color: black;
+text-decoration: none;
+}
+
+
+    .line {
+        border-bottom: 4px solid #6C8776;
+       }
+
+
+       .main, .importantly, .offers, .info {
+        margin-left: 70px;
+    }
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .main img {
+        width: 40%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    p, li {
+        font-size: 20px
+    }
+
+    .content {
+        text-align: center;
+        font-size: 20px;
+        margin: 20px;
+    }
+
+
+
+
+    /* Основний стиль футера */
+    .footer {
+        display: flex;
+        background-color: #C0CFB2;
+        padding: 30px;
+      }
+      
+      .menu-column {
+        flex: 1;
+        padding-right: 40px;
+      }
+      
+      .contacts-column {
+        flex: 1;
+        padding-left: 40px;
+      }
+      
+      .menu-item {
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 25px;
+      }
+      
+      .menu-item a {
+        color: #333;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      
+      .contact-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      
+      .contact-icon {
+        width: 30px; /* Збільшений розмір іконок */
+        height: 30px;
+        margin-right: 10px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        flex-shrink: 0;
+      }
+      
+      .phone-icon {
+        background-image: url('icon/phone-icon.svg');
+      }
+      
+      .secretary-icon {
+        background-image: url('icon/search.svg');
+      }
+      
+      .email-icon {
+        background-image: url('icon/email-icon.svg');
+      }
+      
+      .address-icon {
+        background-image: url('icon/address-icon.svg');
+      }
+      
+      .contact-text {
+        flex: 1;
+      }
+      
+
+      @media (max-width: 768px) {
+        .footer {
+          flex-direction: column;
+        }
+        
+        .menu-column,
+        .contacts-column {
+          padding: 0;
+        }
+        
+        .contacts-column {
+          margin-top: 20px;
+          padding-top: 20px;
+          border-top: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .contact-icon {
+          width: 32px;
+          height: 32px;
+        }
+    }
+
+
+/* Основні стилі для контейнера фікуса */
+.ficus-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  /* Стилі для попапу */
+  .popup-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Стилі для хмарки зліва */
+  .speech-bubble {
+    background: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    max-width: 300px;
+    margin-right: 15px;
+    position: relative;
+    font-size: 20px;
+    line-height: 1.4;
+    display: none;
+    order: -1; /* Хмарка зліва */
+  }
+  
+  .speech-bubble.show {
+    display: block;
+  }
+  
+  .speech-bubble::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #fff;
+  }
+  
+  /* Стилі для блоку питань */
+  .question-box {
+    position: fixed;
+    top: 120px; /* Нижче навігації */
+    right: 20%;
+    transform: translateX(50%);
+    background-color: #e6f7e6;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 18px;
+    max-width: 250px;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: none;
+  }
+  
+  .question-box.show {
+    display: block;
+  }
+  
+  .question-box div {
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: #f8fff8;
+  }
+  
+  .question-box div:hover {
+    background-color: #d0e9d0;
+    transform: translateX(5px);
+  }
+  
+
+  
+  /* Стилі для зображення персонажа */
+  .character {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .character:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Стилі для панелі кнопок */
+  .ficus-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+  
+  /* Стилі для кнопок */
+  .ficus-controls button {
+    background-color: #a3d9a5;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .ficus-controls button:hover {
+    background-color: #8bc78d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Стилі для кнопки повернення */
+  #return-btn {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    background-color: #a3d9a5;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    z-index: 1000;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #333;
+    font-weight: 00;
+  }
+  
+  #return-btn:hover {
+    background-color: #8bc78d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  /* Адаптивність для мобільних пристроїв */
+  @media (max-width: 768px) {
+    .ficus-container {
+      right: 10px;
+      bottom: 5px;
+    }
+    
+    .character {
+      width: 180px;
+    }
+    
+    .speech-bubble {
+      max-width: 200px;
+      font-size: 16px;
+      padding: 10px;
+    }
+    
+    .question-box {
+      bottom: 200px;
+      right: 10px;
+      max-width: 200px;
+      font-size: 16px;
+      padding: 10px;
+    }
+    
+    .ficus-controls button {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+    
+    #return-btn {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  }
+  
+  /* Анімація для привернення уваги */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .attention {
+    animation: bounce 1.5s infinite;
+  }
